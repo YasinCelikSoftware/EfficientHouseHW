@@ -1,37 +1,33 @@
 package secondweekexercises.extras.armstrongnumbers;
 
 public class NumberUtil {
-    public static void isArmstrong() {
-        int a = 0;
-        int c;
-        int armstrongCounter = 0;
+    public static boolean isArmstrong(int number) {
 
-        while (a < 1000000) {
+        int valueOfDigit;
 
-            int total = 0;
-            int b = a;
-            int digitsOfNumber = countDigits(a);
 
-            if (a < 0) {
-                System.out.println("Negative numbers can't be an armstrong number.");
-                return;
-            }
+        int total = 0;
+        int temporaryNumber = number;
+        int digitsOfNumber = countDigits(number);
 
-            while (b > 0) {
-
-                c = b % 10;
-                b /= 10;
-                total += pow(c, digitsOfNumber);
-
-            }
-
-            if (total == a) {
-                System.out.printf("%2d. Armstrong number is : %6d%n",++armstrongCounter,a);
-            }
-
-            a++;
+        if (number < 0) {
+            return false;
         }
+
+        while (temporaryNumber > 0) {
+
+            valueOfDigit = temporaryNumber % 10;
+            temporaryNumber /= 10;
+            total += pow(valueOfDigit, digitsOfNumber);
+
+        }
+
+        if (total == number) {
+            return true;
+        }
+        return false;
     }
+
 
     public static int countDigits(int a) {
 
@@ -46,18 +42,23 @@ public class NumberUtil {
 
     }
 
-    public static int pow(int a, int b){
+    public static int pow(int a, int b) {
 
         int x = 0;
         int total = 1;
 
-        while(x < b){
+        while (x < b) {
             total *= a;
             x++;
         }
 
         return total;
 
+    }
+
+    public static void display(int number) {
+        if (isArmstrong(number))
+            System.out.printf("--> %6d%n", number);
     }
 
 }
