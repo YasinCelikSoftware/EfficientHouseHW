@@ -35,7 +35,7 @@ public class IsPrimeExercise {
 
     public static void test(){
 
-        for(long i = 3167777777l; i < 3167777888l ; i++){
+        for(long i = 0; i < 1000000 ; i++){
 
             if(isPrime(i))
                 System.out.println(i);
