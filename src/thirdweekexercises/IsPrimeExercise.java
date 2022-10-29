@@ -7,11 +7,11 @@ public class IsPrimeExercise {
     }
 
     public static boolean isPrime(long number){
+
         if(number < 2)
             return false;
 
         for(long l = 2; l < sqrt(number); l++){
-
             if(number%l == 0)
                 return false;
 
@@ -21,12 +21,17 @@ public class IsPrimeExercise {
     }
 
     public static long sqrt(long number){
+
         long i;
+
         for(i = 1; i<number; i++){
+
             if(i*i == number)
                 return i;
+
             if(i*i>number)
                 return i-1;
+
         }
 
         return 0;
