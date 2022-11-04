@@ -16,11 +16,11 @@ public class Q4 {
         int year = kb.nextInt();
 
         System.out.print("Please enter the inflation rate : ");
-        double inflationRate = kb.nextDouble()/100;
+        double inflationRate = kb.nextDouble() / 100;
 
 
-        for(int i = 0; i<year; i++){
-            itemCost += itemCost*inflationRate;
+        for(int i = 0; i < year; i++){
+            itemCost += itemCost * inflationRate;
         }
 
         System.out.printf("%nThe price of the item after %d years with %.2f inflation rate : %.2f",year,inflationRate,itemCost);
