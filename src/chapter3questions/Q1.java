@@ -29,7 +29,7 @@ public class Q1 {
 
     public static void test() {
 
-       for(int i = 0; i < 1001; i++){
+       for(int i = 0; i <= 1000; i++){
            display(i);
        }
 
