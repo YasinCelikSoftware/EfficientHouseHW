@@ -24,12 +24,12 @@ public class Q1 {
     }
 
     public static void display(double number){
-        System.out.printf("Square root of %.0f is %.2f%n",number,sqrtBabylonian(number));
+        System.out.printf("Square root of %.0f is %.2f%n", number, sqrtBabylonian(number));
     }
 
     public static void test() {
 
-       for(int i = 0; i<1001;i++){
+       for(int i = 0; i < 1001; i++){
            display(i);
        }
 
