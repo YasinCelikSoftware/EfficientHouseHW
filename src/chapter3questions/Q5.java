@@ -12,7 +12,7 @@ public class Q5 {
         int monthCounter = 0;
         double totalInterestedPayment = 0;
 
-        while(debt>0){
+        while(debt > 0){
             double monthlyPayment = 50;
             double interestedMonthlyDebt = debt * interestRate;
 
