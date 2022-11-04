@@ -9,7 +9,7 @@ public class Q7 {
 
     public static boolean isArmstrong(int number){
 
-        if(number<0)
+        if(number < 0)
             return false;
 
         int total = 0;
@@ -37,7 +37,7 @@ public class Q7 {
     public static int pow(int a, int b){
         int total = 1;
 
-        for(int i=0;i<b;i++)
+        for(int i=0; i < b; i++)
             total *= a;
 
         return total;
@@ -61,7 +61,7 @@ public class Q7 {
         System.out.print("End number : ");
         int endNumber = kb.nextInt();
 
-        for(int i = startValue; i<=endNumber; i++)
+        for(int i = startValue; i <= endNumber; i++)
             display(i);
 
     }
