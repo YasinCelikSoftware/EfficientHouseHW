@@ -1,8 +1,10 @@
 package thirdweekexercises;
 
-public class IsPrimeExercise {
+import java.util.Scanner;
+
+public class GetPrimeExercise {
     public static void main(String[] args) {
-        display(14);
+        test();
     }
 
     public static boolean isPrime(long number){
@@ -24,35 +26,29 @@ public class IsPrimeExercise {
     }
 
     public static int getPrime(int number){
-        int count = 0;
-        if(isPrime(number)) {
-            for (int i = 0; i <= number; i++) {
+        int count = 1;
+
+            for (int i = 1; i <= number; i+=2) {
                 if (isPrime(i))
                     count++;
 
-            }
-            return count;
         }
-        return 0;
+        return count;
     }
 
     public static void display(int number){
-        if(getPrime(number)==0) {
-            System.out.println("This is not an prime number.");
-            return;
-        }
-        System.out.printf("%d number is %d. prime number.",number,getPrime(number));
+        if(isPrime(number))
+            System.out.printf("%d number is %d. prime number.",number,getPrime(number));
+        else
+            System.out.printf("This is not an prime.");
 
     }
 
     public static void test(){
 
-        for(long i = 0; i < 1000000 ; i++){
-
-            if(isPrime(i))
-                System.out.println(i);
-
-        }
+        java.util.Scanner kb = new Scanner(System.in);
+        System.out.print("Please enter the number : ");
+        display(kb.nextInt());
 
     }
 }
