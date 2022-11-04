@@ -9,7 +9,7 @@ public class Q3 {
 
     public static void calculateNewton(){
         java.util.Scanner kb = new Scanner(System.in);
-        final double G = 9.81;
+        double G = 9.81;
 
         while(true) {
             System.out.println("\n\" 0 \" --> Exit");
@@ -19,7 +19,7 @@ public class Q3 {
             System.out.print("Please choose an option : ");
             int choice = kb.nextInt();
 
-            if(choice==0)
+            if(choice == 0)
                 break;
 
 
@@ -29,11 +29,11 @@ public class Q3 {
             System.out.println();
 
             if(choice == 1) {
-                double nOnEarth = carKilogram*G;
+                double nOnEarth = carKilogram * G;
                 System.out.printf("%.2f kg car on earth is %.2f Newton.%n%n",carKilogram,nOnEarth);
             }
             if(choice == 2) {
-                double nOnMoon = (carKilogram*G)/6;
+                double nOnMoon = (carKilogram * G) / 6;
                 System.out.printf("%.2f kg car on moon is %.2f Newton.%n%n",carKilogram,nOnMoon);
             }
 
