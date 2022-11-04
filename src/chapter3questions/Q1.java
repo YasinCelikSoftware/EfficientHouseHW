@@ -7,6 +7,9 @@ public class Q1 {
 
     public static double sqrtBabylonian(double number) {
 
+        if(number == 0)
+            return 0;
+
         double guess = number / 2;
         double lastGuess;
 
