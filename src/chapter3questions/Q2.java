@@ -14,9 +14,9 @@ public class Q2 {
         String result = "";
         String colorCharHolder = "";
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 1; i <= 5; i++) {
 
-            System.out.printf("Please enter the %d. color : ", i + 1);
+            System.out.printf("Please enter the %d. color : ", i);
             String colorChar = kb.nextLine().substring(0,1);
 
             if (!"RGB".contains(colorChar)) {
