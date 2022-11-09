@@ -7,37 +7,52 @@ public class Q3 {
         calculateNewton();
     }
 
-    public static void calculateNewton(){
+    public static void calculateNewton() {
         java.util.Scanner kb = new Scanner(System.in);
-        double G = 9.81;
 
-        while(true) {
-            System.out.println("\n\" 0 \" --> Exit");
-            System.out.println("\" 1 \" --> Calculate newton on earth.");
-            System.out.println("\" 2 \" --> Calculate newton on moon.\n");
+        while (true) {
 
-            System.out.print("Please choose an option : ");
-            int choice = kb.nextInt();
-
-            if(choice == 0)
+            if (makeChoice() == 0)
                 break;
-
 
             System.out.print("Please enter the car kilogram : ");
             double carKilogram = kb.nextInt();
 
-            System.out.println();
+            displayByChoice(makeChoice(), carKilogram);
 
-            if(choice == 1) {
-                double nOnEarth = carKilogram * G;
-                System.out.printf("%.2f kg car on earth is %.2f Newton.%n%n",carKilogram,nOnEarth);
-            }
-            if(choice == 2) {
-                double nOnMoon = (carKilogram * G) / 6;
-                System.out.printf("%.2f kg car on moon is %.2f Newton.%n%n",carKilogram,nOnMoon);
             }
 
         }
+
+
+    public static int makeChoice() {
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+
+        System.out.println("\n\" 0 \" --> Exit");
+        System.out.println("\" 1 \" --> Calculate newton on earth.");
+        System.out.println("\" 2 \" --> Calculate newton on moon.\n");
+
+        System.out.print("Please choose an option : ");
+
+        return kb.nextInt();
+    }
+
+    public static double calculateNewtonOnEarth(double carKilogram) {
+        return carKilogram * 9.81;
+    }
+
+    public static double calculateNewtonOnMoon(double carKilogram) {
+        return calculateNewtonOnEarth(carKilogram) / 6;
+    }
+
+    public static void displayByChoice(int choice, double carKilogram) {
+
+        if (choice == 1) {
+            System.out.printf("%.2f kg car on earth is %.2f Newton.%n", carKilogram, calculateNewtonOnEarth(carKilogram));
+        }
+        else if ( choice == 2) {
+            System.out.printf("%.2f kg car on moon is %.2f Newton.%n", carKilogram, calculateNewtonOnMoon(carKilogram));
+        }
+
     }
 }
-
