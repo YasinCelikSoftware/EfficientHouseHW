@@ -47,7 +47,16 @@ public class Snake {
         for(int i = 1; i <= width+2; i++)
             System.out.print('\u00AF');
     }
-    public static void test(){
-        drawSnake(16,6);
+    public static void test()
+    {
+        java.util.Scanner kb = new java.util.Scanner(System.in);
+
+        System.out.print("Please enter the height : ");
+        int height = kb.nextInt();
+
+        System.out.print("Please enter the width : ");
+        int width = kb.nextInt();
+
+        drawSnake(height, width);
     }
 }
