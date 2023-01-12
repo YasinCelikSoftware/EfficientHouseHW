@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Q7 {
     public static void main(String[] args) {
-        systemInNOut();
+        enterTheSystem();
     }
 
     public static boolean isArmstrong(int number){
@@ -15,16 +15,16 @@ public class Q7 {
         int total = 0;
 
 
-        for(int temporaryNumber = number; temporaryNumber > 0; temporaryNumber /= 10){
+        for(int i = number; i > 0; i /= 10){
 
-            total += pow(temporaryNumber % 10, countDigits(number));
+            total += pow(i % 10, countDigits(number));
 
         }
 
         return total == number;
     }
 
-    public static int countDigits(int a){
+    public static int countDigits(int a) {
 
         int count = 0;
 
@@ -59,14 +59,14 @@ public class Q7 {
         int startValue = kb.nextInt();
 
         System.out.print("End number : ");
-        int endNumber = kb.nextInt();
+        int endValue = kb.nextInt();
 
-        for(int i = startValue; i <= endNumber; i++)
+        for(int i = startValue; i <= endValue; i++)
             display(i);
 
     }
 
-    public static void systemInNOut(){
+    public static void enterTheSystem(){
 
         java.util.Scanner kb = new Scanner(System.in);
 

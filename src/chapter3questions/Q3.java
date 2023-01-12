@@ -10,6 +10,7 @@ public class Q3 {
     public static void calculateNewton() {
         java.util.Scanner kb = new Scanner(System.in);
 
+
         while (true) {
 
             if (makeChoice() == 0)

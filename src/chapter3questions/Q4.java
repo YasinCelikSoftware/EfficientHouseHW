@@ -18,12 +18,20 @@ public class Q4 {
         System.out.print("Please enter the inflation rate : ");
         double inflationRate = kb.nextDouble() / 100;
 
+        display(year,inflationRate,calculateItemCost(year, itemCost, inflationRate));
 
+    }
+
+    public static double calculateItemCost(int year, double itemCost, double inflationRate){
         for(int i = 0; i < year; i++){
             itemCost += itemCost * inflationRate;
         }
+        return itemCost;
+    }
 
-        System.out.printf("%nThe price of the item after %d years with %.2f inflation rate : %.2f",year,inflationRate,itemCost);
+    public static void display(int year, double inflationRate, double price){
+
+        System.out.printf("%nThe price of the item after %d years with %.2f inflation rate : %.2f", year, inflationRate, price);
 
     }
 }

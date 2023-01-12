@@ -6,11 +6,8 @@ public class IsPrimeExercise {
     }
 
     public static boolean isPrime(long number){
-        if (number == 2)
-            return true;
-
-        if(number <= 1 || number%2 == 0)
-            return false;
+        if(number % 2 == 0)
+            return number == 2;
 
 
         for(long l = 3; l*l <= number; l+=2){

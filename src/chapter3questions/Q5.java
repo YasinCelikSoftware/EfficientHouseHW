@@ -1,6 +1,7 @@
 package chapter3questions;
 
 public class Q5 {
+
     public static void main(String[] args) {
         monthCalculator();
     }
@@ -27,7 +28,14 @@ public class Q5 {
             System.out.println(debt);
         }
 
-        System.out.printf("You've paid totally %.2f interest in %d months.%n",totalInterestedPayment,monthCounter);
+        display(totalInterestedPayment,monthCounter);
 
     }
+
+    public static void display(double interest, int months){
+
+        System.out.printf("You've paid totally %.2f interest in %d months.%n",interest,months);
+
+    }
+
 }

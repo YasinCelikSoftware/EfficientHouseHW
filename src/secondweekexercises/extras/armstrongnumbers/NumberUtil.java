@@ -22,10 +22,7 @@ public class NumberUtil {
 
         }
 
-        if (total == number) {
-            return true;
-        }
-        return false;
+        return total == number;
     }
 
 

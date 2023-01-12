@@ -2,7 +2,7 @@ package chapter3questions;
 
 public class Q6 {
     public static void main(String[] args) {
-        systemInNOut();
+        input();
     }
 
     public static void greenCrudCalculator() {
@@ -18,23 +18,21 @@ public class Q6 {
 
         int newCrud = 0, total = 0;
 
-        for (int i = 1; i <= numberOfDays; i++) {
-            if (i % 5 == 0) {
+        for (int i = 0; i <= numberOfDays / 5; i++) {
 
                 total = newCrud + oldCrud;
                 oldCrud = newCrud;
                 newCrud = total;
 
-            }
 
         }
 
-        System.out.printf("\nThe total green crud population in %d days is : %d%n%n", numberOfDays, total);
+        display(numberOfDays,total);
 
     }
 
 
-    public static void systemInNOut() {
+    public static void input() {
 
         System.out.println("Welcome to green crud calculating program.\n");
 
@@ -55,4 +53,12 @@ public class Q6 {
             greenCrudCalculator();
         }
     }
+
+    public static void display(int numberOfDays, int total){
+
+        System.out.printf("\nThe total green crud population in %d days is : %d%n%n", numberOfDays, total);
+
+    }
+
+
 }
