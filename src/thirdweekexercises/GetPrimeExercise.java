@@ -8,14 +8,16 @@ public class GetPrimeExercise {
     }
 
     public static boolean isPrime(long number){
-        if (number % 2 == 0)
-            return number == 2;
+        if (number == 2)
+            return true;
+
+        if(number <= 1 || number%2 == 0)
+            return false;
 
 
+        for(long l = 3; l*l <= number; l+=2){
 
-        for(long l = 3; l * l <= number; l += 2){
-
-            if(number % l == 0)
+            if(number%l == 0)
                 return false;
 
         }
@@ -36,18 +38,16 @@ public class GetPrimeExercise {
 
     public static void display(int number){
         if(isPrime(number))
-            System.out.printf("%d number is %d. prime number.", number, getPrime(number));
+            System.out.printf("%d number is %d. prime number.",number,getPrime(number));
         else
-            System.out.println("This is not an prime.");
+            System.out.printf("This is not an prime.");
 
     }
 
     public static void test(){
 
         java.util.Scanner kb = new Scanner(System.in);
-
         System.out.print("Please enter the number : ");
-
         display(kb.nextInt());
 
     }
